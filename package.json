@@ -1,0 +1,52 @@
+{
+  "name": "react-chessboardjs-wrapper",
+  "version": "0.1.0",
+  "description": "A React wrapper for chessboard.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no tests specified\" && exit 0",
+    "build": "NODE_ENV=production rollup -c",
+    "dev": "NODE_ENV=development rollup -c --watch"
+  },
+  "repository": "https://github.com/siansell/react-chessboardjs-wrapper",
+  "keywords": [
+    "react",
+    "chess",
+    "chessboard"
+  ],
+  "author": {
+    "name": "Simon Ansell",
+    "email": "siansell@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/siansell/react-chessboardjs-wrapper/issues"
+  },
+  "homepage": "https://github.com/siansell/react-chessboardjs-wrapper",
+  "private": false,
+  "dependencies": {
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.13",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "rollup": "^0.59.1",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-uglify": "^3.0.0"
+  }
+}
