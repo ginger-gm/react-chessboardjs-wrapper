@@ -1,4 +1,4 @@
-**WIP**
+**WIP** Early stages.
 
 A React wrapper for [chessboard.js](http://chessboardjs.com). Requires chessboard.js and jQuery to be available on the window object.
 
@@ -41,14 +41,18 @@ A React wrapper for [chessboard.js](http://chessboardjs.com). Requires chessboar
 - chessboard.js `config.showErrors` doesn't seem to work as advertised?
 - Is chessboard.js is no longer maintained?
 
-## NPM
+### NPM
 
 - Not on NPM yet.
 
+### Examples
+
+TODO
+
 ### Dev
 
-- We use [rollup.js](https://rollupjs.org/guide/en). `yarn dev` to watch files and rebuild on changes, `yarn build` to build.
+We use [rollup.js](https://rollupjs.org/guide/en). `yarn dev` to watch files and rebuild on changes, `yarn build` to build.
 
 ### Tests
 
-- TODO, but I need to learn myself some React testing libs.
+TODO, but I need to learn myself some React testing libs.
