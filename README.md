@@ -27,20 +27,23 @@ A React wrapper for [chessboard.js](http://chessboardjs.com). Requires chessboar
 
 ### Notes:
 
-- Changing all props **WITH THE EXCEPTION OF** the following means a full recreation of the board (as only these are settable via the chessboard.js API)
-  - animate
-  - blackSquareColour
-  - border
-  - config.position
-  - config.orientation
-  - resize
-  - showPromotionDialog
-  - whiteSquareColour
+- Changing all props **WITH THE EXCEPTION OF THE FOLLOWING** means a full recreation of the board (as only these are settable via the chessboard.js API)
+  - `animate`
+  - `blackSquareColour`
+  - `border`
+  - `config.position`
+  - `config.orientation`
+  - `resize`
+  - `showPromotionDialog`
+  - `whiteSquareColour`
 
 - This wrapper is optimised for a modified chessboard.js, based on [chessboard.js PR 97](https://github.com/oakmac/chessboardjs/pull/97) which supports image caching. If using the non-modified published chessboard.js, it works anyway (falls back). fixes flickering in Safari (somewhat, it is still not perfect).
 - chessboard.js `config.showErrors` doesn't seem to work as advertised?
-- chessboard.js is no longer maintained?
+- Is chessboard.js is no longer maintained?
 
+## NPM
+
+- Not on NPM yet.
 
 ### Dev
 
