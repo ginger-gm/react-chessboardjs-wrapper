@@ -12,13 +12,13 @@ A React wrapper for [chessboard.js](http://chessboardjs.com). Requires chessboar
   config={config} // The chessboard.js config object
   resize // effective if width prop is a string
   showPromotionDialog={ // falsey, or object as shown
-    onSelect: piece => {
+    onSelect: piece => { // callback function, runs when a piece is selected
       console.log(piece)
       this.setState({
         showPromotionDialog: false,
       })
     },
-    square: target,
+    square: 'e8', // the square the select piece dialog appears on
   }
   whiteSquareColour="aliceblue" // or hex
   width="80%" // string (%) || number (px)
@@ -27,7 +27,7 @@ A React wrapper for [chessboard.js](http://chessboardjs.com). Requires chessboar
 
 ### Notes:
 
-- Changing all props **WITH THE EXCEPTION OF THE FOLLOWING** means a full recreation of the board (as only these are settable via the chessboard.js API)
+- Changing all props **WITH THE EXCEPTION OF THE FOLLOWING** means a full recreation of the board (as only these are settable via the chessboard.js API):
   - `animate`
   - `blackSquareColour`
   - `border`
