@@ -4,6 +4,8 @@ A React wrapper for [chessboard.js](http://chessboardjs.com). Requires chessboar
 
 ### Usage
 
+`yarn add react-chessboardjs-wrapper`
+
 ```jsx
 <ChessboardJs
   animate // boolean, chessboard.js piece animations
@@ -40,10 +42,6 @@ A React wrapper for [chessboard.js](http://chessboardjs.com). Requires chessboar
 - This wrapper is optimised for a modified chessboard.js, based on [chessboard.js PR 97](https://github.com/oakmac/chessboardjs/pull/97) which supports image caching. If using the non-modified published chessboard.js, it works anyway (falls back). fixes flickering in Safari (somewhat, it is still not perfect).
 - chessboard.js `config.showErrors` doesn't seem to work as advertised?
 - Is chessboard.js is no longer maintained?
-
-### NPM
-
-- Not on NPM yet.
 
 ### Examples
 
