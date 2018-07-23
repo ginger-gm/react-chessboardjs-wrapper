@@ -7,6 +7,8 @@ A React wrapper for [chessboard.js](http://chessboardjs.com). Requires chessboar
 `yarn add react-chessboardjs-wrapper`
 
 ```jsx
+import ChessboardJs from 'react-chessboardjs-wrapper'
+
 <ChessboardJs
   animate // boolean, chessboard.js piece animations
   blackSquareColour="steelblue" // or hex
