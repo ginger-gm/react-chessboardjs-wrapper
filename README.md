@@ -12,6 +12,7 @@ import ChessboardJs from 'react-chessboardjs-wrapper'
 <ChessboardJs
   animate // boolean, chessboard.js piece animations
   blackSquareColour="steelblue" // or hex
+  boardRef={(board) => this._board = board} // get a reference to the chessboard.js board object
   border="10px solid #d3d3d3" // css border property
   config={config} // The chessboard.js config object
   resize // effective if width prop is a string

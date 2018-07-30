@@ -278,7 +278,7 @@ class ChessboardJs extends Component {
       boardInitialised: false,
     })
 
-    const { whiteSquareColour, blackSquareColour } = props
+    const { whiteSquareColour, blackSquareColour, boardRef } = props
     const { pieceTheme } = props.config
 
     // Use cached images if they exist
@@ -312,7 +312,7 @@ class ChessboardJs extends Component {
 
     this.setState({
       boardInitialised: true,
-    })
+    }, () => boardRef(this.chessboard.board))
   }
 
   render() {
@@ -361,6 +361,7 @@ class ChessboardJs extends Component {
 ChessboardJs.propTypes = {
   animate: PropTypes.bool,
   blackSquareColour: PropTypes.string,
+  boardRef: PropTypes.func, // eslint-disable-line
   border: PropTypes.string,
   config: PropTypes.shape({
     appearSpeed: speedPropType,
@@ -413,6 +414,7 @@ ChessboardJs.propTypes = {
 ChessboardJs.defaultProps = {
   animate: true,
   blackSquareColour: '#b58863',
+  boardRef: () => {},
   border: '2px solid #404040',
   config: DEFAULT_CONFIG,
   resize: false,
