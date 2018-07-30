@@ -12,9 +12,9 @@ import ChessboardJs from 'react-chessboardjs-wrapper'
 <ChessboardJs
   animate // boolean, chessboard.js piece animations
   blackSquareColour="steelblue" // or hex
-  boardRef={(board) => this._board = board} // get a reference to the chessboard.js board object
   border="10px solid #d3d3d3" // css border property
   config={config} // The chessboard.js config object
+  onInitBoard={(board) => this._board = board} // callback fn, gets passed the chessboard.js board object
   resize // effective if width prop is a string
   showPromotionDialog={ // falsey, or object as shown
     onSelect: piece => { // callback function, runs when a piece is selected
