@@ -53,8 +53,8 @@ class ChessboardJs extends Component {
   }
 
   componentDidMount() {
-    if (!window.ChessBoard) return
-    if (!window.$) return
+    if (window && !window.ChessBoard) return
+    if (window && !window.$) return
 
     const {
       config,
@@ -316,10 +316,10 @@ class ChessboardJs extends Component {
   }
 
   render() {
-    if (!window.ChessBoard) {
+    if (window && !window.ChessBoard) {
       return <ChessboardError message="Error: chessboard.js not found on page." />
     }
-    if (!window.$) {
+    if (window && !window.$) {
       return <ChessboardError message="Error: chessboard.js requires jQuery." />
     }
 
