@@ -312,7 +312,7 @@ class ChessboardJs extends Component {
 
     this.setState({
       boardInitialised: true,
-    }, () => onInitBoard(this.chessboard.board))
+    }, () => onInitBoard(this.chessboard.board, this.chessboard.id))
   }
 
   render() {
