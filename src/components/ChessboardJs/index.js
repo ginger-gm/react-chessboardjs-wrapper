@@ -41,6 +41,9 @@ class ChessboardJs extends Component {
   constructor(props) {
     super(props)
 
+    this.boardRef = React.createRef()
+    this.containerRef = React.createRef()
+
     this.chessboard = {
       board: null,
       id: uuidv4(), // unique id for namespacing multiple boards on page
@@ -171,7 +174,7 @@ class ChessboardJs extends Component {
     /* The following prop changes require a new board object, as they are not settable via
     the chessboard.js API. */
     if (newWidth !== currentWidth) {
-      window.$(this.root).css('width', newWidth)
+      window.$(this.boardRef.current).css('width', newWidth)
     }
 
     if (newShowNotation !== currentShowNotation
@@ -291,7 +294,7 @@ class ChessboardJs extends Component {
 
     // Let's go
     this.chessboard.board = window.ChessBoard(
-      this.root,
+      this.boardRef.current,
       {
         ...props.config,
         animate: false, // never animate when creating a new board
@@ -331,13 +334,12 @@ class ChessboardJs extends Component {
       <React.Fragment>
         <div
           id={`boardContainer-${this.chessboard.id}`}
-          style={{
-            position: 'relative',
-          }}
+          ref={this.containerRef}
+          style={{ position: 'relative' }}
         >
           <div
             id={`board-${this.chessboard.id}`}
-            ref={(b) => { this.root = b }}
+            ref={this.boardRef}
             style={{
               width: this.props.width,
             }}
