@@ -1,5 +1,3 @@
-**WIP** Early stages.
-
 A React wrapper for [chessboard.js](http://chessboardjs.com). Requires chessboard.js and jQuery to be available on the window object.
 
 ### Usage
